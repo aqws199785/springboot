@@ -1,11 +1,11 @@
 
-
-
-redis:
-  host: person101
-  password: 123
-  key: pattern
 spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://person101:3306/study?serverTimezone=UTC
+      username: root
+      password: aqws199785
   redis:
     host: person101
     port: 6379
@@ -13,7 +13,12 @@ spring:
     database: 0
     lettuce:
       pool:
-        max-active: 8 # ×î´óÁ¬½ÓÊý
-        max-idle: 8    # ×î´ó¿ÕÏÐÁ¬½Ó
-        min-idle: 0    # ×îÐ¡¿ÕÏÐÁ¬½Ó
-        max-wait: 100    # ×î´óµÈ´ýÊ±³¤
+        max-active: 8 # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        max-idle: 8    # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        min-idle: 0    # ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        max-wait: 100    # ï¿½ï¿½ï¿½È´ï¿½Ê±ï¿½ï¿½
+
+redis:
+  host: person101
+  password: 123
+  key: pattern
