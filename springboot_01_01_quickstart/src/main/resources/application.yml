@@ -1,9 +1,10 @@
+server:
+  port: 8081
 
 spring:
   datasource:
-    druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://person101:3306/study?serverTimezone=UTC
+      url: jdbc:mysql://person101:3306/hmdp?useSSL=false&serverTimezone=UTC
       username: root
       password: aqws199785
   redis:
@@ -17,8 +18,16 @@ spring:
         max-idle: 8    # ����������
         min-idle: 0    # ��С��������
         max-wait: 100    # ���ȴ�ʱ��
-
+  jackson:
+    default-property-inclusion: non_null #json 处理忽略json为空字段
+mybatis-plus:
+#  type-aliases-package: com.mapper
 redis:
   host: person101
   password: 123
   key: pattern
+logging:
+  level:
+    root: info
+  pattern:
+    dateformat: mm:ss:SSS
