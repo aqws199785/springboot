@@ -2,7 +2,10 @@ package com.controller;
 
 import com.dto.LoginDto;
 import com.dto.ResultDto;
+import com.dto.UserDto;
+import com.entity.User;
 import com.service.UserService;
+import com.utils.UserHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,7 +34,15 @@ public class UserController {
     * 用户登录
     * 登录需要的账户 验证码 密码 保存在请求体中 会话也保存这些信息
     * */
+    @PostMapping("/login")
     public ResultDto login(@RequestBody LoginDto loginDto,HttpSession httpSession){
         return userService.login(loginDto,httpSession);
     }
+
+    @GetMapping("/me")
+    public ResultDto me(){
+        UserDto userDto = UserHolder.getUser();
+        return ResultDto.ok(userDto);
+    }
+
 }

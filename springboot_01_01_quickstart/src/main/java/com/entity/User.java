@@ -25,7 +25,7 @@ public class User implements Serializable {
     private int id;
     private String phone;
     private String password;
-    private String nickName;
+    private String nickName; // 昵称
     private String icon; // 头像
     private LocalDateTime createTime;
     private LocalDateTime updateTime;
