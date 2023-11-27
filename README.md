@@ -23,3 +23,37 @@ session共享问题:多台Tomcat并不共享session存储空间，当请求切�
 
    
 
+## 拦截器
+
+**第一拦截器**
+
+作用：拦截一切路径,刷新存活时间
+
+1. 获取token
+2. 查询Redis的用户
+3. 保存到ThreadLocal
+4. 刷新token有效期
+5. 放行
+
+**第二拦截器**
+
+作用：拦截需要登录的路径
+
+查询ThreadLocal的用户
+
+1. 不存在,则拦截
+2. 存在,则继续
+
+
+
+
+
+## 代码问题
+
+### 前端Authorization:返回为[object Object]
+
+```java
+// 检查返回给前端的数据是否正确 
+ResultDto.ok(token)
+```
+
