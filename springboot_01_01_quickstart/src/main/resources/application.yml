@@ -1,5 +1,5 @@
 server:
-  port: 8086
+  port: 8081
 
 spring:
   datasource:
@@ -27,7 +27,7 @@ redis:
   password: 123
   key: pattern
 logging:
-  level:
-    root: info
+#  level:
+#    root: info
   pattern:
     dateformat: mm:ss:SSS

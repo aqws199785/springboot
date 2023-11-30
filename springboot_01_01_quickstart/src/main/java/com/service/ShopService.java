@@ -1,7 +1,9 @@
 package com.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.dto.ResultDto;
+import com.entity.Shop;
 
-public interface ShopService {
+public interface ShopService extends IService<Shop> {
     ResultDto queryById(Long id);
 }
