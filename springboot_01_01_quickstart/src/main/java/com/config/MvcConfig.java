@@ -45,4 +45,5 @@ public class MvcConfig implements WebMvcConfigurer {
                         "/user/login"
                 ).order(1);
     }
+
 }
