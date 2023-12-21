@@ -16,6 +16,14 @@ public class RedisConstants {
     public static final String LOGIN_TOKEN_KEY = "login:token:";
     public static final Long LOGIN_TOKEN_TTL = 30L;
 
+
+    /*
+     * 店铺业务前缀
+     * 店铺缓存前缀
+     * */
+    public static final String SHOP_SERVICE_PREFIX = "shop";
+    public static final String SHOP_CACHE_PREFIX = "cache:shop:";
+
     /*
      * 互斥锁业务前缀
      * 互斥锁值
@@ -24,4 +32,5 @@ public class RedisConstants {
     public static final String SHOP_LOCK_PREFIX = "lock:shop:";
     public static final String SHOP_LOCK_VALUE = "lock";
     public static final Long SHOP_LOCK_TTL = 10L;
+    public static final Long SHOP_LOGICAL_EXPIRE_TTL = 10L;
 }
