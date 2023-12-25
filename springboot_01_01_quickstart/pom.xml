@@ -67,8 +67,8 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
             <version>${mysql-connector-java.version}</version>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
@@ -76,6 +76,12 @@
             <artifactId>hutool-all</artifactId>
             <version>${hutool.varsion}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+        </dependency>
+
     </dependencies>
 
 

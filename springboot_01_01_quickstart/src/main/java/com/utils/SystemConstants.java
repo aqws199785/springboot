@@ -9,4 +9,9 @@ public class SystemConstants {
     public static final String USER_NICK_NAME_PREFIX = "user_";
     public static final int DEFAULT_PAGE_SIZE = 5;
     public static final int MAX_PAGE_SIZE = 10;
+
+    // 2023-01-01 00:00:00 转换为时间戳:秒
+    public static final long BEGIN_TIMESTAMP=1672502400L;
+
+
 }

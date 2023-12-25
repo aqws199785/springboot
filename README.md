@@ -102,6 +102,21 @@ session共享问题:多台Tomcat并不共享session存储空间，当请求切�
 
 
 
+## Redis工具类
+
+基于StringRedisTemplate封装一个缓存工具类，满足下列需求:
+
+1. 将任意Java对象序列化为json并存储在string类型的key中，并且可以设置TTL过期时间
+2. 将任意Java对象序列化为json并存储在string类型的key中，并且可以设置逻辑过期时间，用于处理缓存击穿问题
+3. 根据指定的key查询缓存，并反序列化为指定类型，利用缓存空值的方式解决缓存穿透问题
+4. 根据指定的key查询缓存，并反序列化为指定类型，需要利用逻辑过期解决缓存击穿问题
+
+## 全局唯一ID生成器
+
+
+
+
+
 # 代码问题
 
 ## 前端Authorization:返回为[object Object]

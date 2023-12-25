@@ -11,7 +11,7 @@ spring:
     host: person101
     port: 6379
     password: root
-    database: 0
+    database: 1
     lettuce:
       pool:
         max-active: 8 # ���������
