@@ -3,6 +3,7 @@ package com.service.impl;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.dto.RedisData;
 import com.dto.ResultDto;
@@ -40,6 +41,14 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements Sh
         }
 
         return ResultDto.ok(shop);
+    }
+
+    @Override
+    public ResultDto queryShopByType(Integer typeId, Integer current, Double x, Double y) {
+        Page<Shop> shopPage = query()
+                .eq("type_id", typeId)
+                .page(new Page<>(current, 10));
+        return ResultDto.ok(shopPage);
     }
 
 
