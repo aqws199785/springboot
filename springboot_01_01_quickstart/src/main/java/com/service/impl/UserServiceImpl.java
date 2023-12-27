@@ -12,7 +12,6 @@ import com.entity.User;
 import com.mapper.UserMapper;
 import com.service.UserService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import com.utils.RegexUtils;

@@ -22,7 +22,7 @@ public class User implements Serializable {
     * 自增主键
     * */
     @TableId(value = "id",type = IdType.AUTO)
-    private int id;
+    private Long id;
     private String phone;
     private String password;
     private String nickName; // 昵称

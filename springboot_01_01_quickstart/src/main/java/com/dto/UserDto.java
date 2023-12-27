@@ -16,7 +16,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class UserDto {
     // id
-    private int id;
+    private Long id;
     // 昵称
     private String nickName;
     // 图标（头像）
